@@ -181,6 +181,12 @@ if(!document.location.hostname.endsWith("wv")) {
 	script.setAttribute("async", "");
 	script.dataset.token = "e84f95f0-8bf6-4389-b09f-14563661877c";
 	document.body.append(script);
+
+	const script2 = document.createElement("script");
+	script2.defer = true;
+	script2.src = "https://static.cloudflareinsights.com/beacon.min.js";
+	script2.dataset.cfBeacon = '{"token": "e8089482b26d49b782a549d3e373c237"}';
+	document.body.append(script2);
 }
 </script>
 </html>
