@@ -55,6 +55,7 @@ function renameBrFilesSync(dir) {
 			headerRulesCount++;
 			headers += `/${newRelativeFilePath}\n`
 				+ `\tContent-Encoding: br\n`
+				+ `\tCache-Control: no-transform\n`
 				+ `\tx-content-length: ${contentLength}\n\n`;
 		}
 	}
