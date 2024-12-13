@@ -10,15 +10,15 @@ export const WIDE_VIDEO_URL = "https://wide.video/";
 export const FFMPEG = <const>{
 	ORIGIN: "https://ffmpeg.org",
 	LICENSE: "https://github.com/FFmpeg/FFmpeg/blob/master/COPYING.GPLv3",
-	DIR: "ffmpeg-wasm-0.9.2",
+	DIR: "ffmpeg-wasm-0.9.3",
 	WORKER_ID: "ffmpegWorker",
 	FILES: {
-		wasm: "ffmpeg-gpl-simd.wasm",
-		main: "ffmpeg-gpl-simd-wv.js"
+		wasm: "ffmpeg-gpl.wasm",
+		main: "ffmpeg-gpl-wv.js"
 	},
 	LGPL: <FFmpegEnv>{
-		FFMPEG_MAIN_URL: "https://cdn.wide.video/ffmpeg/0.9.2/ffmpeg-lgpl-simd-wv.js",
-		FFMPEG_WASM_URL: "https://cdn.wide.video/ffmpeg/0.9.2/ffmpeg-lgpl-simd.wasm"
+		FFMPEG_MAIN_URL: "https://cdn.wide.video/ffmpeg/0.9.3/ffmpeg-lgpl-wv.js",
+		FFMPEG_WASM_URL: "https://cdn.wide.video/ffmpeg/0.9.3/ffmpeg-lgpl.wasm"
 	}
 }
 

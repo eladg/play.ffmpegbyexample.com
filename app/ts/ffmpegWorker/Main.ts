@@ -81,7 +81,7 @@ self.onmessage = async event => {
 				const content = FS.readFile(filename);
 				const type = ContentType.getMimeType(filename);
 				const options = type ? {type} : undefined;
-				files.push(new File([content.buffer], filename, options));
+				files.push(new File([<ArrayBuffer>content.buffer], filename, options));
 			}
 		for(const ttyOutput of Object.values(ttyOutputs)) {
 			const file = ttyOutput.flush();
