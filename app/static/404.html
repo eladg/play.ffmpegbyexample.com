@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#181818">
+
+	<title>404 Page Not Found</title>
+
+	<link rel="shortcut icon" type="image/png" href="/image/favicon.png" />
+
+	<style>
+		:where(:not(img)) {
+			all: unset;
+			display: revert;
+			line-height: 1em;
+		}
+
+		:root {
+			font: 13px Menlo, Monaco, "Courier New", monospace;
+			background: #181818;
+			color: #ccc;
+		}
+
+		body {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+		}
+
+		section {
+			padding: 220px 0 0 0;
+			max-width: 90%;
+			background: url(/image/manifest-icon-192.png) no-repeat top center;
+		}
+
+		p.code::after {
+			display: block;
+			content: "--------------------------------------------------";
+			height: 2em;
+		}
+
+		a {
+			cursor: pointer;
+			font-weight: bold;
+			text-decoration: underline;
+		}
+	</style>
+</head>
+<body>
+	<section>
+		<h1>Oops!</h1>
+		<p class="message">We can't seem to find the page you're looking for.</p>
+		<p class="code">Error code: 404</p>
+		<a href="/">Back To Home</a>
+	</section>
+</body>
+</html>
