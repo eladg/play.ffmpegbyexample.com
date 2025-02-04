@@ -1,0 +1,23 @@
+[build]
+  base = "/"
+  publish = "dist/"
+  command = "node ./build/esbuild.js"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+    [headers.values]
+      # Enable cross-origin isolation (required for WASM)
+      Cross-Origin-Opener-Policy = "same-origin"
+      Cross-Origin-Embedder-Policy = "require-corp"
+      Cross-Origin-Resource-Policy = "cross-origin"
+      
+      # CORS headers for your assets
+      Access-Control-Allow-Methods = "GET, POST, OPTIONS"
+      Access-Control-Allow-Origin = "*"
+      Access-Control-Allow-Headers = "*"
+      
