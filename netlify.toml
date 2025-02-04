@@ -3,11 +3,6 @@
   publish = "dist/"
   command = "node ./build/esbuild.js"
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-
 [[headers]]
   for = "/*"
     [headers.values]
