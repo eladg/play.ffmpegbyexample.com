@@ -16,3 +16,33 @@
       Access-Control-Allow-Origin = "*"
       Access-Control-Allow-Headers = "*"
       
+      # Brotli compression headers
+      Content-Encoding = "br"
+      Vary = "Accept-Encoding"
+
+[[redirects]]
+  from = "/*"
+  to = "/:splat.br"
+  status = 200
+  force = false
+  conditions = {Accept-Encoding = "br", Path-Is-File = "false", Path-Is-Directory = "false"}
+
+[[headers]]
+  for = "*.js.br"
+    [headers.values]
+      Content-Type = "text/javascript"
+
+[[headers]]
+  for = "*.wasm.br"
+    [headers.values]
+      Content-Type = "application/wasm"
+
+[[headers]]
+  for = "/ffmpeg-wasm-0.9.3/ffmpeg-gpl-wv.js.br"
+    [headers.values]
+      x-content-length = "124739"
+
+[[headers]]
+  for = "/ffmpeg-wasm-0.9.3/ffmpeg-gpl.wasm.br"
+    [headers.values]
+      x-content-length = "40775938"
